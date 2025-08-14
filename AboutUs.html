@@ -17,6 +17,20 @@
       background-color: rgba(0, 0, 0, 0.75);
       backdrop-filter: blur(4px);
     }
+    /* Fade In Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .fade-in {
+      animation: fadeInUp 1s ease forwards;
+    }
   </style>
 </head>
 <body class="text-white">
@@ -24,40 +38,65 @@
   <!-- Navbar -->
   <header class="bg-black bg-opacity-60 fixed top-0 left-0 right-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-bold">VELVET ROUTES</h1>
-      <nav class="space-x-6 text-sm">
+      <h1 class="text-xl font-bold tracking-wider">VELVET ROUTES</h1>
+      <nav class="space-x-6 text-sm uppercase">
         <a href="index.html" class="hover:text-teal-300 transition">Home</a>
-        <a href="about.html" class="text-teal-300 font-semibold">About</a>
+        <a href="AboutUs.html" class="text-teal-300 font-semibold">About</a>
         <a href="services.html" class="hover:text-teal-300 transition">Services</a>
         <a href="contact.html" class="hover:text-teal-300 transition">Contact</a>
       </nav>
     </div>
   </header>
 
-  <div class="overlay min-h-screen pt-32 px-6 py-16 flex flex-col justify-center items-center text-center">
-    <h1 class="text-5xl font-bold tracking-wide mb-6">About Us</h1>
-    <p class="max-w-4xl text-lg leading-relaxed text-gray-300">
+  <!-- Main Content -->
+  <div class="overlay min-h-screen pt-32 px-6 py-16 flex flex-col items-center text-center">
+    <h1 class="text-5xl font-bold tracking-wide mb-6 fade-in">About Us</h1>
+    <p class="max-w-4xl text-lg leading-relaxed text-gray-300 fade-in" style="animation-delay:0.2s;">
       <strong>VELVET ROUTES</strong> isn’t just another itinerary generator. It’s a gateway to experiences you've only dreamed of.
       With advanced algorithms and a passion for exploration, we make your travel dreams practical, personal, and possible.
     </p>
 
-    <p class="mt-6 max-w-4xl text-lg leading-relaxed text-gray-300">
+    <p class="mt-6 max-w-4xl text-lg leading-relaxed text-gray-300 fade-in" style="animation-delay:0.4s;">
       Whether you’re craving the icy calm of Iceland, the chaos of Bangkok streets, or a slow sunset in Santorini,
       our platform builds personalized itineraries that align with your vibe, your budget, and your pace.
     </p>
 
-    <p class="mt-6 max-w-4xl text-lg leading-relaxed text-gray-300">
+    <p class="mt-6 max-w-4xl text-lg leading-relaxed text-gray-300 fade-in" style="animation-delay:0.6s;">
       Born from the blend of data and wanderlust, VELVET ROUTES is your modern travel companion. We remove the guesswork and replace it with confidence.
     </p>
 
-    <p class="mt-6 max-w-4xl text-lg leading-relaxed text-gray-300">
-      We believe travel is more than just destinations—it’s about how you feel when you get there. And we’re here to make every moment matter.
-    </p>
-
-    <p class="mt-6 max-w-4xl italic text-gray-400">
+    <p class="mt-6 italic text-gray-400 fade-in" style="animation-delay:0.8s;">
       “The world is wide. Let us help you explore it right.”
     </p>
 
+    <!-- Team Section -->
+    <section class="mt-16 max-w-6xl fade-in" style="animation-delay:1s;">
+      <h2 class="text-3xl font-bold mb-8">Meet Our Team</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-opacity-20 transition">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Aarushi Mehta</h3>
+          <p class="text-gray-400">Frontend Designer</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-opacity-20 transition">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Karan Kapoor</h3>
+          <p class="text-gray-400">Backend Developer</p>
+        </div>
+        <div class="bg-white bg-opacity-10 p-6 rounded-lg shadow-lg hover:bg-opacity-20 transition">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Team Member" class="w-24 h-24 rounded-full mx-auto mb-4">
+          <h3 class="text-xl font-semibold">Simran Singh</h3>
+          <p class="text-gray-400">Project Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <a href="planner.html" class="mt-12 px-8 py-3 bg-teal-500 hover:bg-teal-400 text-lg font-semibold rounded-full transition">
+      Plan My Trip
+    </a>
+
+    <!-- Footer -->
     <footer class="mt-12 text-gray-500 text-sm">
       <p>&copy; 2025 VELVET ROUTES. Made with ♡ for explorers, dreamers, and storytellers.</p>
     </footer>
